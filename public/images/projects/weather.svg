@@ -1,0 +1,5 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <text x="400" y="250" text-anchor="middle" fill="#00ff88" font-family="Arial, sans-serif" font-size="40" font-weight="bold">DASHBOARD</text>
+  <text x="400" y="350" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20">React • Chart.js • WebSocket</text>
+</svg>
