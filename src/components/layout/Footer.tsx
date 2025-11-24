@@ -15,20 +15,20 @@ const Footer = () => {
     <footer className="relative bg-background-secondary border-t border-primary-500/20">
       {/* Arrière-plan */}
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       <div className="section-padding max-width-container relative z-10">
         <div className="py-12 space-y-8">
-          
+
           {/* Contenu principal */}
           <div className="grid md:grid-cols-3 gap-8">
-            
+
             {/* Colonne 1 - À propos */}
             <div className="space-y-4">
               <div className="text-2xl font-bold text-gradient">
                 &lt;{portfolioConfig.personal.name.split(' ')[0]}/&gt;
               </div>
               <p className="text-foreground-muted leading-relaxed">
-                {portfolioConfig.personal.title} passionné par la création d&apos;expériences 
+                {portfolioConfig.personal.title} passionné par la création d&apos;expériences
                 web modernes et performantes.
               </p>
               <div className="text-sm text-foreground-muted">
@@ -61,20 +61,15 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="font-semibold text-foreground">Contact</h3>
               <div className="space-y-2">
-                <a 
+                <a
                   href={`mailto:${portfolioConfig.personal.email}`}
                   className="block text-foreground-muted hover:text-primary-400 transition-colors text-sm"
                 >
                   {portfolioConfig.personal.email}
                 </a>
-                <a 
-                  href={`tel:${portfolioConfig.personal.phone}`}
-                  className="block text-foreground-muted hover:text-primary-400 transition-colors text-sm"
-                >
-                  {portfolioConfig.personal.phone}
-                </a>
+
               </div>
-              
+
               {/* Réseaux sociaux */}
               <div className="flex space-x-4 pt-2">
                 <motion.a
@@ -114,7 +109,7 @@ const Footer = () => {
 
           {/* Bas du footer */}
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            
+
             {/* Copyright */}
             <div className="flex items-center space-x-2 text-sm text-foreground-muted">
               <span>© {currentYear} {portfolioConfig.personal.name}.</span>

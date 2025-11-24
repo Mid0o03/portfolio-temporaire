@@ -7,13 +7,13 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import emailjs from '@emailjs/browser'
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Github, 
-  Linkedin, 
-  Twitter, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
+  Twitter,
   Send,
   Check,
   AlertCircle
@@ -105,7 +105,7 @@ const ContactSection = () => {
       {/* Arrière-plan */}
       <div className="absolute inset-0 bg-background-secondary" />
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       <div className="section-padding max-width-container relative z-10">
         <motion.div
           ref={ref}
@@ -114,7 +114,7 @@ const ContactSection = () => {
           variants={containerVariants}
           className="space-y-16"
         >
-          
+
           {/* En-tête */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
             <motion.div
@@ -132,17 +132,17 @@ const ContactSection = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            
+
             {/* Informations de contact */}
             <motion.div variants={itemVariants} className="space-y-8">
-              
+
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-foreground">
                   Restons en contact
                 </h3>
                 <p className="text-foreground-secondary leading-relaxed">
-                  Je suis toujours ouvert aux nouvelles opportunités et collaborations. 
-                  Que ce soit pour un projet, une opportunité ou simplement pour discuter 
+                  Je suis toujours ouvert aux nouvelles opportunités et collaborations.
+                  Que ce soit pour un projet, une opportunité ou simplement pour discuter
                   de développement web, n&apos;hésitez pas à me contacter.
                 </p>
               </div>
@@ -158,29 +158,11 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <a 
+                    <a
                       href={`mailto:${portfolioConfig.personal.email}`}
                       className="text-foreground-secondary hover:text-primary-400 transition-colors"
                     >
                       {portfolioConfig.personal.email}
-                    </a>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ x: 10 }}
-                  className="flex items-center space-x-4 glass-effect p-4 rounded-lg group"
-                >
-                  <div className="p-3 bg-primary-500/10 rounded-lg group-hover:bg-primary-500/20 transition-colors">
-                    <Phone className="text-primary-400" size={20} />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Téléphone</p>
-                    <a 
-                      href={`tel:${portfolioConfig.personal.phone}`}
-                      className="text-foreground-secondary hover:text-primary-400 transition-colors"
-                    >
-                      {portfolioConfig.personal.phone}
                     </a>
                   </div>
                 </motion.div>
@@ -242,7 +224,7 @@ const ContactSection = () => {
             {/* Formulaire de contact */}
             <motion.div variants={itemVariants}>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                
+
                 {/* Nom */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
