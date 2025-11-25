@@ -159,9 +159,9 @@ export const portfolioConfig = {
 
   // Configuration EmailJS (pour le formulaire de contact)
   emailjs: {
-    serviceId: "votre_service_id", // Remplacez par votre Service ID EmailJS
-    templateId: "votre_template_id", // Remplacez par votre Template ID EmailJS
-    publicKey: "votre_public_key", // Remplacez par votre Public Key EmailJS
+    serviceId: "service_4a5y8rs", // Remplacez par votre Service ID EmailJS
+    templateId: "template_h9akeuf", // Remplacez par votre Template ID EmailJS
+    publicKey: "PUBRG8K_3SPt0NRsm", // Remplacez par votre Public Key EmailJS
   },
 
   // Configuration des animations 3D
