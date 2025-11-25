@@ -5,15 +5,15 @@ export const portfolioConfig = {
     title: "Développeur Front-End",
     subtitle: "Spécialisé en React & Next.js",
     description: "Passionné par la création d'interfaces utilisateur modernes et performantes. Je transforme vos idées en expériences web exceptionnelles.",
-    email: "mael.jerome@gmail.com",
+    email: "maeljerome.pro@gmail.com",
     location: "Paris, France",
     profileImage: "/images/logo.png", // Remplacez par votre photo
-    resume: "/documents/CV-Développeur Front‑End Freelance.pdf", // Remplacez par votre CV
+    resume: "/documents/cv.pdf", // Remplacez par votre CV
   },
 
   // Liens sociaux
   social: {
-    github: "https://github.com/Mid0o03/Mid0o03",
+    github: "https://github.com/Mid0o03",
     linkedin: "https://www.linkedin.com/in/mael-jerome",
     twitter: "https://twitter.com/mael-jerome",
     instagram: "https://instagram.com/mael-jerome",
@@ -35,18 +35,18 @@ export const portfolioConfig = {
     frontend: [
       { name: "React", level: 70, icon: "⚛️" },
       { name: "Next.js", level: 70, icon: "▲" },
-      { name: "TypeScript", level: 30, icon: "📘" },
-      { name: "Tailwind CSS", level: 92, icon: "🎨" },
-      { name: "JavaScript", level: 94, icon: "📝" },
-      { name: "HTML/CSS", level: 96, icon: "🌐" },
+      { name: "TypeScript", level: 50, icon: "📘" },
+      { name: "Tailwind CSS", level: 80, icon: "🎨" },
+      { name: "JavaScript", level: 90, icon: "📝" },
+      { name: "HTML/CSS", level: 90, icon: "🌐" },
     ],
     tools: [
       { name: "Git", level: 90, icon: "🔧" },
       { name: "Figma", level: 60, icon: "🎭" },
-      { name: "Webpack", level: 20, icon: "📦" },
+      { name: "Webpack", level: 10, icon: "📦" },
       { name: "Docker", level: 10, icon: "🐳" },
       { name: "AWS", level: 10, icon: "☁️" },
-      { name: "GraphQL", level: 0, icon: "📊" },
+      { name: "GraphQL", level: 10, icon: "📊" },
     ],
   },
 

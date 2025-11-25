@@ -112,7 +112,7 @@ const AboutSection = () => {
             {/* Description */}
             <div className="space-y-6 text-foreground-secondary leading-relaxed">
               <p>
-                Développeur front-end passionné avec plus de 3 ans d&apos;expérience dans la 
+                Développeur front-end passionné avec plus de 7 mois d&apos;expérience dans la 
                 création d&apos;applications web modernes et performantes. Spécialisé en 
                 <span className="text-primary-400 font-medium"> React, Next.js et TypeScript</span>.
               </p>
