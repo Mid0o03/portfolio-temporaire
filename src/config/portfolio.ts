@@ -57,7 +57,7 @@ export const portfolioConfig = {
       title: "Matcha Moment",
       description: "site vitrine moderne avec panier",
       longDescription: "Matcha Moment est un site vitrine moderne avec panier et gestion d'articles",
-      image: "/images/projects/matchamoment2.png", // Remplacez par vos images
+      image: "/images/projects/matchamoment 2.png", // Remplacez par vos images
       technologies: ["React", "TypeScript", "vite", "Tailwind CSS", ],
       category: "site vitrine",
       githubUrl: "https://github.com/Mid0o03/matcha-moment",
