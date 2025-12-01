@@ -45,7 +45,7 @@ const timelineData: TimelineItem[] = [
     company: 'HETIC',
     location: 'Paris, France',
     date: '2025 - Présent',
-    description: 'front-end,backend,data,marketing,UX/UI,design,communication,management,no-code tech,IA',
+    description: 'front-end,backend,data, marketing, UX/UI, design, communication, management, no-code tech, IA',
     technologies: ['React', 'Vue.js', 'JavaScript', 'CSS3'],
     icon: <GraduationCap className="w-6 h-6" />,
   },
