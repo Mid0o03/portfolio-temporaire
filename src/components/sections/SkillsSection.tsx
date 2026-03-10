@@ -66,7 +66,7 @@ const SkillBar = ({ skill, index, inView }: SkillBarProps) => {
 
 const SkillsSection = () => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     triggerOnce: true,
   })
 

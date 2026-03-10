@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const AboutSection = () => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     triggerOnce: true,
   })
 
@@ -53,7 +53,7 @@ const AboutSection = () => {
             <div className="relative">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="relative w-80 h-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden glass-effect"
+                className="relative w-[280px] sm:w-80 h-[280px] sm:h-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden glass-effect"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20" />
                 <Image
