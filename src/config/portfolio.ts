@@ -69,13 +69,24 @@ export const portfolioConfig = {
 
   // Projets portfolio
   projects: [
-
+    {
+      id: 20,
+      title: "AI Digital Twin",
+      description: "AI-powered Professional Digital Double",
+      longDescription: "An AI-powered digital twin trained on my professional background (LinkedIn & GitHub data) using a Gemini 1.5 Pro model. Features a custom API route and a minimalist frontend with Framer Motion to chat with my AI double.",
+      image: "/images/projects/digital-twin.png",
+      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Gemini API"],
+      category: "IA & Automation",
+      githubUrl: "https://github.com/Mid0o03/digital-twin",
+      liveUrl: "https://digital-twin-nine-fawn.vercel.app/",
+      featured: false,
+    },
     {
       id: 2,
       title: "EasyBioLab",
       description: "The Modern Biologist's Toolkit",
       longDescription: "A comprehensive platform featuring advanced utilities for biology: DNA analyzer, PCR calculator, cell counter, and Punnett Square. An essential tool for streamlining laboratory work, from biochemistry to genetics.",
-      image: "/images/projects/Easybiolab.png", // Remplacez par vos images
+      image: "/images/projects/EasyBioLab.png", // Remplacez par vos images
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "D3.js"],
       category: "Education",
       githubUrl: "https://github.com/Mid0o03/EasyBioLab",
