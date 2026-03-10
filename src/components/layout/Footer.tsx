@@ -28,8 +28,7 @@ const Footer = () => {
                 &lt;{portfolioConfig.personal.name.split(' ')[0]}/&gt;
               </div>
               <p className="text-foreground-muted leading-relaxed">
-                {portfolioConfig.personal.title} passionné par la création d&apos;expériences
-                web modernes et performantes.
+                {portfolioConfig.personal.title} passionate about creating modern and high-performance web experiences.
               </p>
               <div className="text-sm text-foreground-muted">
                 📍 {portfolioConfig.personal.location}
@@ -70,7 +69,7 @@ const Footer = () => {
 
               </div>
 
-              {/* Réseaux sociaux */}
+              {/* Social Networks */}
               <div className="flex space-x-4 pt-2">
                 <motion.a
                   href={portfolioConfig.social.github}
@@ -113,9 +112,9 @@ const Footer = () => {
             {/* Copyright */}
             <div className="flex items-center space-x-2 text-sm text-foreground-muted">
               <span>© {currentYear} {portfolioConfig.personal.name}.</span>
-              <span>Fait avec</span>
+              <span>Made with</span>
               <Heart size={16} className="text-red-400" />
-              <span>et</span>
+              <span>and</span>
               <span className="text-primary-400">Next.js</span>
             </div>
 

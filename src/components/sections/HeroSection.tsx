@@ -154,19 +154,19 @@ const HeroSection = () => {
           >
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-primary-400">
-                {portfolioConfig.projects.filter(p => p.featured).length}+
+                {portfolioConfig.projects.length}+
               </div>
-              <div className="text-sm text-foreground-muted">Projets réalisés</div>
+              <div className="text-sm text-foreground-muted">Completed Projects</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-primary-400">
-                {portfolioConfig.skills.frontend.length + portfolioConfig.skills.tools.length}+
+                {portfolioConfig.skills.frontend.length + portfolioConfig.skills.backend.length + portfolioConfig.skills.tools.length + portfolioConfig.skills.aiTools.length}+
               </div>
               <div className="text-sm text-foreground-muted">Technologies</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary-400">7 mois</div>
-              <div className="text-sm text-foreground-muted">Expérience</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary-400">7 months</div>
+              <div className="text-sm text-foreground-muted">Experience</div>
             </div>
           </motion.div>
         </div>

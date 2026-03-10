@@ -13,19 +13,18 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Twitter,
   Send,
   Check,
   AlertCircle
 } from 'lucide-react'
 import { portfolioConfig } from '@/config/portfolio'
 
-// Schéma de validation
+// Validation Schema
 const contactSchema = z.object({
-  name: z.string().min(2, 'Le nom doit contenir au moins 2 caractères'),
-  email: z.string().email('Adresse email invalide'),
-  subject: z.string().min(5, 'Le sujet doit contenir au moins 5 caractères'),
-  message: z.string().min(10, 'Le message doit contenir au moins 10 caractères'),
+  name: z.string().min(2, 'Name must contain at least 2 characters'),
+  email: z.string().email('Invalid email address'),
+  subject: z.string().min(5, 'Subject must contain at least 5 characters'),
+  message: z.string().min(10, 'Message must contain at least 10 characters'),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -72,7 +71,7 @@ const ContactSection = () => {
       setSubmitStatus('success')
       reset()
     } catch (error) {
-      console.error('Erreur lors de l\'envoi:', error)
+      console.error('Error sending message:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -124,10 +123,10 @@ const ContactSection = () => {
               className="h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto"
             />
             <h2 className="text-3xl lg:text-4xl font-bold">
-              Travaillons <span className="text-gradient">ensemble</span>
+              Let&apos;s work <span className="text-gradient">together</span>
             </h2>
             <p className="text-lg text-foreground-secondary max-w-2xl mx-auto">
-              Vous avez un projet en tête ? N&apos;hésitez pas à me contacter pour en discuter.
+              Have a project in mind? Feel free to contact me to discuss it.
             </p>
           </motion.div>
 
@@ -138,12 +137,11 @@ const ContactSection = () => {
 
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-foreground">
-                  Restons en contact
+                  Get in touch
                 </h3>
                 <p className="text-foreground-secondary leading-relaxed">
-                  Je suis toujours ouvert aux nouvelles opportunités et collaborations.
-                  Que ce soit pour un projet, une opportunité ou simplement pour discuter
-                  de développement web, n&apos;hésitez pas à me contacter.
+                  I am always open to new opportunities and collaborations.
+                  Whether for a project, an opportunity, or just to chat about web development, do not hesitate to reach out.
                 </p>
               </div>
 
@@ -175,7 +173,7 @@ const ContactSection = () => {
                     <MapPin className="text-primary-400" size={20} />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Localisation</p>
+                    <p className="font-medium text-foreground">Location</p>
                     <p className="text-foreground-secondary">
                       {portfolioConfig.personal.location}
                     </p>
@@ -183,9 +181,9 @@ const ContactSection = () => {
                 </motion.div>
               </div>
 
-              {/* Réseaux sociaux */}
+              {/* Social Networks */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-foreground">Retrouvez-moi sur</h4>
+                <h4 className="font-semibold text-foreground">Find me on</h4>
                 <div className="flex space-x-4">
                   <motion.a
                     href={portfolioConfig.social.github}
@@ -207,16 +205,6 @@ const ContactSection = () => {
                   >
                     <Linkedin size={24} />
                   </motion.a>
-                  <motion.a
-                    href={portfolioConfig.social.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="p-3 glass-effect rounded-lg text-foreground-secondary hover:text-primary-400 hover:border-primary-500/40 transition-all"
-                  >
-                    <Twitter size={24} />
-                  </motion.a>
                 </div>
               </div>
             </motion.div>
@@ -228,14 +216,14 @@ const ContactSection = () => {
                 {/* Nom */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Nom complet
+                    Full Name
                   </label>
                   <input
                     {...register('name')}
                     type="text"
                     id="name"
                     className="w-full px-4 py-3 glass-effect rounded-lg border border-primary-500/20 focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400 text-foreground placeholder-foreground-muted transition-colors"
-                    placeholder="Votre nom complet"
+                    placeholder="Your full name"
                   />
                   {errors.name && (
                     <p className="mt-2 text-sm text-red-400 flex items-center">
@@ -248,14 +236,14 @@ const ContactSection = () => {
                 {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Adresse email
+                    Email address
                   </label>
                   <input
                     {...register('email')}
                     type="email"
                     id="email"
                     className="w-full px-4 py-3 glass-effect rounded-lg border border-primary-500/20 focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400 text-foreground placeholder-foreground-muted transition-colors"
-                    placeholder="votre@email.com"
+                    placeholder="your@email.com"
                   />
                   {errors.email && (
                     <p className="mt-2 text-sm text-red-400 flex items-center">
@@ -268,14 +256,14 @@ const ContactSection = () => {
                 {/* Sujet */}
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                    Sujet
+                    Subject
                   </label>
                   <input
                     {...register('subject')}
                     type="text"
                     id="subject"
                     className="w-full px-4 py-3 glass-effect rounded-lg border border-primary-500/20 focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400 text-foreground placeholder-foreground-muted transition-colors"
-                    placeholder="Sujet de votre message"
+                    placeholder="Message subject"
                   />
                   {errors.subject && (
                     <p className="mt-2 text-sm text-red-400 flex items-center">
@@ -295,7 +283,7 @@ const ContactSection = () => {
                     id="message"
                     rows={6}
                     className="w-full px-4 py-3 glass-effect rounded-lg border border-primary-500/20 focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400 text-foreground placeholder-foreground-muted transition-colors resize-none"
-                    placeholder="Décrivez votre projet ou votre demande..."
+                    placeholder="Describe your project or request..."
                   />
                   {errors.message && (
                     <p className="mt-2 text-sm text-red-400 flex items-center">
@@ -316,11 +304,11 @@ const ContactSection = () => {
                   {isSubmitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-black/20 border-t-black animate-spin rounded-full" />
-                      Envoi en cours...
+                      Sending...
                     </>
                   ) : (
                     <>
-                      Envoyer le message
+                      Send message
                       <Send size={18} />
                     </>
                   )}
@@ -334,7 +322,7 @@ const ContactSection = () => {
                     className="flex items-center space-x-2 text-green-400 bg-green-400/10 p-4 rounded-lg border border-green-400/20"
                   >
                     <Check size={20} />
-                    <span>Message envoyé avec succès ! Je vous répondrai bientôt.</span>
+                    <span>Message sent successfully! I will get back to you soon.</span>
                   </motion.div>
                 )}
 
@@ -345,7 +333,7 @@ const ContactSection = () => {
                     className="flex items-center space-x-2 text-red-400 bg-red-400/10 p-4 rounded-lg border border-red-400/20"
                   >
                     <AlertCircle size={20} />
-                    <span>Erreur lors de l&apos;envoi. Veuillez réessayer ou me contacter directement.</span>
+                    <span>Error sending message. Please try again or contact me directly.</span>
                   </motion.div>
                 )}
               </form>

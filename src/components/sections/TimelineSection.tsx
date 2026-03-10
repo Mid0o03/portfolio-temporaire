@@ -20,13 +20,35 @@ const timelineData: TimelineItem[] = [
   {
     id: 1,
     type: 'work',
-    title: 'Développeur Front-End Junior',
+    title: 'Front-End Developer',
     company: 'Freelance',
     location: 'Paris, France',
-    date: '2025 - Présent',
-    description: 'Développement d\'applications web modernes avec React et Next.js. ',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    date: '2025 - Present',
+    description: 'Development of modern web applications with React and Next.js.',
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Three.js', 'Supabase', 'Firebase', 'Stripe', 'Node.js', 'SQL', 'REST APIs'],
     icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    id: 5,
+    type: 'education',
+    title: 'Full Stack Web Developer',
+    company: 'OpenClassrooms',
+    location: 'Online',
+    date: '2026 - Present',
+    description: 'Project-oriented degree program: developing modern web applications with React and Next.js.',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'SEO'],
+    icon: <GraduationCap className="w-6 h-6" />,
+  },
+  {
+    id: 3,
+    type: 'education',
+    title: 'Full Stack Web Developer Curriculum',
+    company: 'The Odin Project',
+    location: 'Online',
+    date: '2025 - 2026',
+    description: 'Intensive and practical training: learning modern web development through the creation of numerous complete projects from A to Z.',
+    technologies: ['JavaScript', 'React', 'Node.js', 'Git', 'HTML/CSS'],
+    icon: <GraduationCap className="w-6 h-6" />,
   },
   {
     id: 2,
@@ -34,41 +56,30 @@ const timelineData: TimelineItem[] = [
     title: 'Certification',
     company: 'Codédex',
     date: '2024',
-    description: 'certification html css js',
-    technologies: ['Html', 'Css', 'Javascript'],
+    description: 'HTML, CSS, JS certification',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
     icon: <Award className="w-6 h-6" />,
-  },
-  {
-    id: 3,
-    type: 'education',
-    title: 'Bachelor dev web',
-    company: 'HETIC',
-    location: 'Paris, France',
-    date: '2025 - Présent',
-    description: 'front-end,backend,data, marketing, UX/UI, design, communication, management, no-code tech, IA',
-    technologies: ['React', 'Vue.js', 'JavaScript', 'CSS3'],
-    icon: <GraduationCap className="w-6 h-6" />,
   },
   {
     id: 4,
     type: 'education',
-    title: 'Certification langue japonaise',
+    title: 'Japanese Language Certification',
     company: 'ISI Tokyo',
-    location: 'Tokyo, Japon',
+    location: 'Tokyo, Japan',
     date: '2023 - 2025',
-    description: 'apprentissage de la langue japonaise',
+    description: 'Japanese language learning',
     technologies: ['JLPT N3'],
     icon: <GraduationCap className="w-6 h-6" />,
   },
   {
-    id: 5,
+    id: 6,
     type: 'education',
-    title: 'License Biologie/Chimie',
-    company: 'Université Evry',
+    title: 'Biology/Chemistry Degree',
+    company: 'Evry University',
     location: 'Evry, France',
     date: '2020 - 2022',
-    description: 'license Biologie/Chimie',
-    technologies: ['Biologie', 'Chimie'],
+    description: 'Bachelor\'s in Biology/Chemistry',
+    technologies: ['Biology', 'Chemistry'],
     icon: <GraduationCap className="w-6 h-6" />,
   }
 ]
@@ -119,7 +130,7 @@ const TimelineSection = () => {
       {/* Arrière-plan */}
       <div className="absolute inset-0 bg-background-secondary" />
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       <div className="section-padding max-width-container relative z-10">
         <motion.div
           ref={ref}
@@ -137,10 +148,10 @@ const TimelineSection = () => {
               className="h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto"
             />
             <h2 className="text-3xl lg:text-4xl font-bold">
-              Mon <span className="text-gradient">Parcours</span>
+              My <span className="text-gradient">Journey</span>
             </h2>
             <p className="text-lg text-foreground-secondary max-w-2xl mx-auto">
-              Découvrez mon parcours professionnel et mes réalisations
+              Discover my professional journey and achievements
             </p>
           </motion.div>
 
@@ -155,9 +166,8 @@ const TimelineSection = () => {
                 <motion.div
                   key={item.id}
                   variants={itemVariants}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
                 >
                   {/* Point sur la ligne */}
                   <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 z-10">
@@ -175,9 +185,8 @@ const TimelineSection = () => {
 
                   {/* Card */}
                   <div
-                    className={`w-full md:w-[45%] ml-20 md:ml-0 ${
-                      index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                    }`}
+                    className={`w-full md:w-[45%] ml-20 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
+                      }`}
                   >
                     <motion.div
                       whileHover={{ scale: 1.02, y: -5 }}

@@ -92,17 +92,19 @@ const SkillsSection = () => {
   }
 
   const skillIcons = portfolioConfig.skills.frontend.map(s => s.icon)
+    .concat(portfolioConfig.skills.backend.map(s => s.icon))
     .concat(portfolioConfig.skills.tools.map(s => s.icon))
+    .concat(portfolioConfig.skills.aiTools.map(s => s.icon))
 
   return (
     <section id="skills" className="py-20 lg:py-32 relative">
       {/* Arrière-plan */}
       <div className="absolute inset-0 bg-background-secondary" />
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       {/* Icônes flottantes */}
       <FloatingIcons icons={skillIcons} className="opacity-10" />
-      
+
       <div className="section-padding max-width-container relative z-10">
         <motion.div
           ref={ref}
@@ -111,7 +113,7 @@ const SkillsSection = () => {
           variants={containerVariants}
           className="space-y-16"
         >
-          
+
           {/* En-tête de section */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
             <motion.div
@@ -121,30 +123,54 @@ const SkillsSection = () => {
               className="h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto"
             />
             <h2 className="text-3xl lg:text-4xl font-bold">
-              Mes <span className="text-gradient">Compétences</span>
+              My <span className="text-gradient">Skills</span>
             </h2>
             <p className="text-lg text-foreground-secondary max-w-2xl mx-auto">
-              Technologies et outils que j&apos;utilise pour créer des expériences web exceptionnelles
+              Technologies and tools I use to build exceptional web experiences
             </p>
           </motion.div>
 
           {/* Grille des compétences */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            
+          <div className="grid lg:grid-cols-4 gap-6 lg:gap-8">
+
             {/* Frontend */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground flex items-center">
+                <h3 className="text-xl lg:text-2xl font-semibold text-foreground flex items-center">
                   <span className="mr-3">💻</span>
-                  Frontend Development
+                  Frontend
                 </h3>
-                <p className="text-foreground-muted">
-                  Technologies pour créer des interfaces modernes et réactives
+                <p className="text-sm lg:text-base text-foreground-muted">
+                  Creating modern and responsive interfaces
                 </p>
               </div>
-              
+
               <div className="space-y-6">
                 {portfolioConfig.skills.frontend.map((skill, index) => (
+                  <SkillBar
+                    key={skill.name}
+                    skill={skill}
+                    index={index}
+                    inView={inView}
+                  />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Backend */}
+            <motion.div variants={itemVariants} className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl lg:text-2xl font-semibold text-foreground flex items-center">
+                  <span className="mr-3">⚙️</span>
+                  Backend
+                </h3>
+                <p className="text-sm lg:text-base text-foreground-muted">
+                  Robust databases, servers and APIs
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {portfolioConfig.skills.backend.map((skill, index) => (
                   <SkillBar
                     key={skill.name}
                     skill={skill}
@@ -158,15 +184,15 @@ const SkillsSection = () => {
             {/* Outils et Technologies */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground flex items-center">
+                <h3 className="text-xl lg:text-2xl font-semibold text-foreground flex items-center">
                   <span className="mr-3">🛠️</span>
-                  Outils & Technologies
+                  Tools
                 </h3>
-                <p className="text-foreground-muted">
-                  Outils de développement et technologies complémentaires
+                <p className="text-sm lg:text-base text-foreground-muted">
+                  Complementary development tools
                 </p>
               </div>
-              
+
               <div className="space-y-6">
                 {portfolioConfig.skills.tools.map((skill, index) => (
                   <SkillBar
@@ -178,37 +204,32 @@ const SkillsSection = () => {
                 ))}
               </div>
             </motion.div>
+            {/* Outils IA */}
+            <motion.div variants={itemVariants} className="space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl lg:text-2xl font-semibold text-foreground flex items-center">
+                  <span className="mr-3">🧠</span>
+                  AI Workflow
+                </h3>
+                <p className="text-sm lg:text-base text-foreground-muted">
+                  Cutting-edge AI tools for development and productivity
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {portfolioConfig.skills.aiTools.map((skill, index) => (
+                  <SkillBar
+                    key={skill.name}
+                    skill={skill}
+                    index={index}
+                    inView={inView}
+                  />
+                ))}
+              </div>
+            </motion.div>
           </div>
 
-          {/* Technologies en grille */}
-          <motion.div variants={itemVariants} className="pt-12">
-            <h3 className="text-xl font-semibold text-center mb-8 text-foreground">
-              Technologies que j&apos;utilise au quotidien
-            </h3>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {[...portfolioConfig.skills.frontend, ...portfolioConfig.skills.tools].map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ delay: 0.8 + index * 0.05, duration: 0.4 }}
-                  whileHover={{ scale: 1.1, y: -5 }}
-                  className="glass-effect p-6 rounded-lg text-center group hover:border-primary-500/40 transition-all duration-300"
-                >
-                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">
-                    {skill.icon}
-                  </div>
-                  <div className="text-sm font-medium text-foreground group-hover:text-primary-400 transition-colors">
-                    {skill.name}
-                  </div>
-                  <div className="text-xs text-foreground-muted mt-1">
-                    {skill.level}%
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+
 
           {/* Call-to-action */}
           <motion.div
@@ -217,10 +238,10 @@ const SkillsSection = () => {
           >
             <div className="glass-effect p-8 rounded-2xl max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold mb-4 text-foreground">
-                Prêt à collaborer ?
+                Ready to collaborate?
               </h3>
               <p className="text-foreground-muted mb-6">
-                Je suis toujours ouvert à de nouveaux défis et projets innovants.
+                I am always open to new challenges and innovative projects.
               </p>
               <motion.a
                 href="#contact"

@@ -36,7 +36,7 @@ const AboutSection = () => {
     <section id="about" className="py-20 lg:py-32 relative">
       {/* Arrière-plan avec grille */}
       <div className="absolute inset-0 grid-bg opacity-5" />
-      
+
       <div className="section-padding max-width-container">
         <motion.div
           ref={ref}
@@ -45,10 +45,10 @@ const AboutSection = () => {
           variants={containerVariants}
           className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
-          
+
           {/* Colonne gauche - Image et info */}
           <motion.div variants={itemVariants} className="space-y-8">
-            
+
             {/* Photo de profil */}
             <div className="relative">
               <motion.div
@@ -66,7 +66,7 @@ const AboutSection = () => {
                 {/* Effet de glow */}
                 <div className="absolute inset-0 rounded-2xl shadow-xl shadow-primary-500/20" />
               </motion.div>
-              
+
               {/* Badge flottant */}
               <motion.div
                 initial={{ scale: 0 }}
@@ -74,7 +74,7 @@ const AboutSection = () => {
                 transition={{ delay: 0.5, type: "spring" }}
                 className="absolute -bottom-4 -right-4 bg-primary-500 text-black px-4 py-2 rounded-full font-semibold text-sm shadow-lg"
               >
-                👋 Disponible
+                👋 Available
               </motion.div>
             </div>
 
@@ -84,18 +84,18 @@ const AboutSection = () => {
                 <div className="text-2xl font-bold text-primary-400">
                   {portfolioConfig.projects.length}+
                 </div>
-                <div className="text-sm text-foreground-muted">Projets</div>
+                <div className="text-sm text-foreground-muted">Projects</div>
               </div>
               <div className="glass-effect p-4 rounded-lg text-center">
                 <div className="text-2xl font-bold text-primary-400">3+</div>
-                <div className="text-sm text-foreground-muted">Années</div>
+                <div className="text-sm text-foreground-muted">Years</div>
               </div>
             </div>
           </motion.div>
 
           {/* Colonne droite - Contenu */}
           <motion.div variants={itemVariants} className="space-y-8">
-            
+
             {/* En-tête */}
             <div className="space-y-4">
               <motion.div
@@ -105,37 +105,37 @@ const AboutSection = () => {
                 className="h-1 bg-gradient-to-r from-primary-400 to-accent-400"
               />
               <h2 className="text-3xl lg:text-4xl font-bold">
-                À propos de <span className="text-gradient">moi</span>
+                About <span className="text-gradient">me</span>
               </h2>
             </div>
 
             {/* Description */}
             <div className="space-y-6 text-foreground-secondary leading-relaxed">
               <p>
-                Développeur front-end passionné avec plus de 7 mois d&apos;expérience dans la 
-                création d&apos;applications web modernes et performantes. Spécialisé en 
-                <span className="text-primary-400 font-medium"> React, Next.js et TypeScript</span>.
+                Passionate front-end developer with over 7 months of experience in creating
+                modern and high-performance web applications. Specialized in
+                <span className="text-primary-400 font-medium"> React, Next.js and TypeScript</span>.
               </p>
               <p>
-                J&apos;aime transformer des concepts complexes en interfaces utilisateur intuitives 
-                et élégantes. Mon approche combine créativité et rigueur technique pour 
-                livrer des solutions qui dépassent les attentes.
+                I love transforming complex concepts into intuitive and elegant user interfaces.
+                My approach combines creativity and technical rigor to deliver solutions that
+                exceed expectations.
               </p>
               <p>
-                Actuellement, je me concentre sur les technologies web de pointe, 
-                l&apos;optimisation des performances et l&apos;amélioration de l&apos;expérience utilisateur.
+                Currently, I am focusing on cutting-edge web technologies, performance
+                optimization, and improving user experiences.
               </p>
             </div>
 
             {/* Ce que je fais */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">Ce que je fais</h3>
+              <h3 className="text-xl font-semibold text-foreground">What I do</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: "🚀", title: "Développement Frontend", desc: "Interfaces modernes et réactives" },
-                  { icon: "⚡", title: "Optimisation Performance", desc: "Applications rapides et fluides" },
-                  { icon: "📱", title: "Design Responsive", desc: "Compatible tous appareils" },
-                  { icon: "🔧", title: "Maintenance & Support", desc: "Suivi et amélioration continue" },
+                  { icon: "🚀", title: "Frontend Development", desc: "Modern and responsive interfaces" },
+                  { icon: "⚡", title: "Performance Optimization", desc: "Fast and fluid applications" },
+                  { icon: "📱", title: "Responsive Design", desc: "Compatible with all devices" },
+                  { icon: "🔧", title: "Maintenance & Support", desc: "Monitoring and continuous improvement" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -162,7 +162,7 @@ const AboutSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary"
               >
-                Me contacter
+                Contact me
               </motion.a>
               <motion.a
                 href={portfolioConfig.personal.resume}
@@ -172,7 +172,7 @@ const AboutSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary"
               >
-                Télécharger CV
+                Download Resume
               </motion.a>
             </div>
           </motion.div>
